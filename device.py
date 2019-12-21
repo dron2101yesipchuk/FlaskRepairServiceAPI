@@ -26,3 +26,14 @@ class Device:
     name = property(getname, setname)
     issue = property(getissue, setissue)
 
+    @property
+    def serialize(self):
+        return {
+            'id': self._id,
+            'name': self._name,
+            'issue': self._issue
+        }
+
+    def __repr__(self):
+        return str(self.__dict__)
+
