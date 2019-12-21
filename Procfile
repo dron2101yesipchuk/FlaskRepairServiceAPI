@@ -1,1 +1,1 @@
-web: gunicorn RepairServiceFlask:app
+web: gunicorn app:app
