@@ -6,6 +6,10 @@ app = Flask(__name__)
 
 service = RepairService()
 
+@app.route('/test')
+def test():
+    return "Hello world"
+
 @app.route('/repair_service/api/v1.0/devices_on_repair', methods=['GET'])
 def get_devices():
     return jsonify({'devices_on_repair': service.get_devices()})
